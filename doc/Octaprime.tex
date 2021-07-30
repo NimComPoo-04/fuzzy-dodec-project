@@ -1,0 +1,56 @@
+\section*{\centering Assignment 3}
+\vspace{15px}
+Write a program to take lower and upper range from the user and print 
+all th eocta prime numbers within that range. (A octaprime number is a number
+whose octal equivalent is prim number.) Example: 15 is a octaprime number as its
+octal equivalent is 17 which is a prime number.
+
+\section*{Algorithm:}
+\textbf{\color{javapurple}Class OctaPrime\_main:}\\
+\textbf{Method Main:}\\
+Step 1: create a input handler and accept the lower and upper limits\\
+Step 2: bounds check on the input and if they fail reinput the data\\
+Step 3: call the printoctalprimes function for the execution of the program\\\\
+\textbf{\color{javapurple}Class OctaPrime\_main:}\\
+\textbf{Method printoctalprimes:}\\
+Step 1: declare i as a loop control variable \\
+Step 2: start a `for' loop from lower\_range to upper\_range with i as the loop control.\\
+Step 3: get a new octal number from the octal function and i as the input\\
+Step 4: print the octal as a octoprime if it is a prime.\\\\
+\textbf{Method octal:}\\
+Step 1: create variable to create octal number and a stabilizer.\\
+Step 2: get into a while loop until x becomes zero\\
+Step 3: add (x \% 8) * dmz to the value of oc\\
+Step 4: increase dmz by 10\\
+Step 5: return the value of oc\\\\
+\textbf{Method isPrime:}\\
+Step 1: if x less than or equals to one then return false\\
+Step 2: if numbers starting from 2 till x-1 are a factor of x then return false\\
+Step 3: if non of the cases match return true\\\\
+
+\section*{Source code:}
+\lstinputlisting{src/Octaprime.java}
+\lstinputlisting{src/Octaprime_main.java}
+
+\section*{Variable Listing:}
+\begin{center}
+\begin{tabular}{ | c | l | c | l |}
+\hline
+	\multicolumn{1}{ | c | }{\textbf{Name}} & 
+	\multicolumn{1}{ | c | }{\textbf{Function}} &
+	\multicolumn{1}{ | c | }{\textbf{Type}} &
+	\multicolumn{1}{ | c | }{\textbf{Scope}} \\
+\hline
+	op & object to access methods & OctalPrime & main()\\
+	x & intput to the octal function & int & octal()\\
+	dmz & octal number's position stabilizer & int & octal()\\
+	oc & octal number that is generated & int & octal()\\
+	x & intput to the is prime function & int & isPrime()\\
+	i & controls the for loop & int & isPrime(), printoctalprimes()\\
+	lr & lower range limit & int & printoctalprimes(), main()\\
+	ur & upper range limit & int & printoctalprimes(), main()\\
+	sc & input handler for input (duh) & int & main()\\
+	o & octal number that was generated & int & printoctalprimes()\\
+\hline
+\end{tabular}
+\end{center}

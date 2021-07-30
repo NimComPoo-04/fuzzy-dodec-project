@@ -1,0 +1,76 @@
+\section*{\centering Assignment 6}
+\vspace{15px}
+A class Mixer has been defined to merge two sorted integer array in ascending 
+order. Some of the members of the class are given below: \\\\
+\begin{tabular}{l l}
+	\textbf{Class Name:} & \textbf{Mixer} \\\\
+	\textbf{Data members/instance variables:} & \\
+	int arr[] & : to store elements of an array \\
+	int n & : to store the size of the array \\\\
+	\textbf{Member functions:} & \\
+	Mixer(int nn) & : constructor to assign n = nn \\ 
+	void accept() & : to accept the elements of the array in\\
+	&ascending order without any duplicates \\
+	Mixer mix(Mixer A) & : to merge the current object array\\
+	&elements with the parameterized array elements \\
+	&and return the rusultant object.\\
+	void display() & : to display elements of the array \\\\
+
+\end{tabular}
+
+\section*{Algorithm:}
+\textbf{\color{javapurple}Class Pell\_main:}\\
+\textbf{Method Main:}\\
+Step 1: create a input handler using Scanner calss.\\
+Step 2: create 2 variables to hold the length of the mixer arrays\\
+Step 3: check if the input is sensible and greatere than 0\\
+Step 4: if the check fails propmt the user again to input number\\
+Step 5: create two objects of mixer class using the previously declared variables.\\
+Step 6: accept input from the user using the accept() method.\\
+Step 7: call the mix method using the mix objects that are created.\\
+Stpe 8: display the mixed arrays.\\\\
+\textbf{\color{javapurple}Class Mixer:}\\
+\textbf{Method Mixer:}\\
+Step 1: set the object variable n to nn \\
+Step 2: create a array of size n and store it in object variable to arr\\\\
+\textbf{Method mix:}\\
+Step 1: create a new object for mixer with the size of the two input mixer arrays.\\
+Step 2: fill the newly created array with the elements of A and this.\\
+Step 3: sort the array of the newly created object using insertion sort.\\
+Step 4: return the object.\\\\
+\textbf{Method accept:}\\
+Step 1: create a input handler using Scanner class.\\
+Step 2: loop throught the arr array of the current object and fill it with input.\\\\
+\textbf{Method display:}\\
+Step 1: loop througth the whole arr array of current object and print the elements.\\
+Step 2: print a newline for asthetics.\\\\
+
+\section*{Source code:}
+\lstinputlisting{src/Mixer.java}
+\lstinputlisting{src/Mixer_main.java}
+
+\section*{Variable Listing:}
+\begin{center}
+\begin{tabular}{ | c | l | c | l |}
+\hline
+	\multicolumn{1}{ | c | }{\textbf{Name}} & 
+	\multicolumn{1}{ | c | }{\textbf{Function}} &
+	\multicolumn{1}{ | c | }{\textbf{Type}} &
+	\multicolumn{1}{ | c | }{\textbf{Scope}} \\
+\hline
+	n1 & number of elements & int & main \\
+	n2 & number of elements & int & main \\
+	m1 & object to be filled & Mixer & main \\
+	m2 & object to be filled & Mixer & main \\
+	m3 & output of the mixers & Mixer & main \\
+	arr & to store elements of an array & int[] & Mixer \\
+	n & to store size of arr & int & Mixer \\
+	nn & temporary input var & int & Mixer() \\
+	sc & input of all the numbers & Scanner & accept, main\\
+	A & mix object to be used to mix stuff & Mixer & mix \\
+	m & output of the mix method & Mixer & mix \\
+	i,j & loop control variables & int & mix \\
+	key & key of insertion sort & int & mix \\
+\hline
+\end{tabular}
+\end{center}

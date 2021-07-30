@@ -1,0 +1,56 @@
+\section*{\centering Assignment 1}
+\vspace{15px}
+Writa a pogram to take lower and upper range from the user and print all the Kaprekar numbers
+within that range. (A number n hanving d digits is squared and split into two pieces, 
+right hand piece having d digits and left hand piece having d or d-1 digits. If sum of the two peices is
+equal to the number then n is Kaprekar number). Eg: 9, 45, [55], 297
+
+\section*{Algorithm:}
+\textbf{\color{javapurple}Class Kaprekar\_main:}\\
+\textbf{Method Main:}\\
+Step 1: declare lr and ur as lower and upper limit respectively\\
+Step 2: accept input from the user the lower and upper limit in lr and ur\\
+Step 3: check if the numbers are greater than zero and ur > lr. if not then renter\\
+Step 4: initialize a Kaprekar object.\\
+Step 5: call the display method of Kaprekar object\\\\
+\textbf{\color{javapurple}Class Kaprekar:}\\
+\textbf{Method display:}\\
+Step 1: declare i as a loop control variable \\
+Step 2: start a `for' loop from lower\_range to upper\_range with i as the loop control.\\
+Step 3: call iskaprekar method passing i as the actual parameter. \\
+Step 4: if iskaprekar returned true then print the number to screen. \\\\
+\textbf{Method iskaprekar:}\\
+Step 1: store the square of the formal parameter in sq. \\
+Step 2: store the length of sq in len bu using the formula log10(sq)+1 = len. \\
+Step 3: store the value of sq \% 10 \^\ len/2 + 1 in part1 if len is odd. \\  
+Step 4: store the value of sq \% 10 \^\ len/2 in part2 if len is even. \\  
+Step 5: return the value of part1 + part2 == x\\
+
+\section*{Source code:}
+\lstinputlisting{src/Kaprekar.java}
+\lstinputlisting{src/Kaprekar_main.java}
+
+\section*{Variable Listing:}
+\begin{center}
+\begin{tabular}{ | c | l | c | l |}
+\hline
+	\multicolumn{1}{ | c | }{\textbf{Name}} & 
+	\multicolumn{1}{ | c | }{\textbf{Function}} &
+	\multicolumn{1}{ | c | }{\textbf{Type}} &
+	\multicolumn{1}{ | c | }{\textbf{Scope}} \\
+\hline
+	lower\_range & it stores the lower range of number & int & object \\
+	upper\_range & it stores the upper range of number & int & object \\
+	lr & it is a temporary variable to store range of number & int & main(),Kaprekar() \\
+	ur & it is a temporary variable to store range of number & int & main(),Kaprekar() \\
+	i & iterator variable to control the for loop & int & display() \\
+	x & it is the input to the iskaprekar func. & int & iskaprekar() \\
+	sq & it stores the square of the intput & int & iskaprekar() \\
+	len & it is the number of digits in sq & int & iskaprekar() \\
+	part1 & it is the first part & int & iskaprekar() \\
+	part2 & it is the second part & int & iskaprekar() \\
+	sc & it is a input handler & Scanner & main() \\
+	kp & it is the control object & Kaprekar & main() \\
+\hline
+\end{tabular}
+\end{center}

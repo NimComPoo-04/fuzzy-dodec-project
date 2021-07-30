@@ -1,0 +1,45 @@
+\section*{\centering Assignment 2}
+\vspace{15px}
+Write a Java Program to pring the first N numbers of the Pell series.\\
+In mathematics, the Pell numbers are an infinite sequence of integers. The sequence of Pell 
+numbers starts with 0 and 1, and then each Pell numbers is the sum of twice the previous Pell number 
+and the Pell number before that.:\\\\
+thus, 70 is the companion to 29, and 70 = 2 * 29 + 12 = 58 + 12.\\\\
+The first few terms of the sequence are :\\\\
+0, 1, 2, 5, 12, 29, k70, 169, 408, 985, 2375, 5741, 1386
+
+\section*{Algorithm:}
+\textbf{\color{javapurple}Class Pell\_main:}\\
+\textbf{Method Main:}\\
+Step 1: create a input handler and take the number of terms as input \\
+Step 2: if the terms have a less number than 0 then promp user for reinput \\
+Step 3: create a object of Pell class and call display method\\\\
+\textbf{\color{javapurple}Class Pell:}\\
+\textbf{Method display:}\\
+Step 1: create two variable for first and secon pell numbers\\
+Step 2: start a `for' loop from 0 to N with the loop control i\\
+Step 3: print 2 * second term + first term to the screen and also store it in c\\
+Step 4: set first term to second term and second term to c.\\\\
+
+\section*{Source code:}
+\lstinputlisting{src/Pell.java}
+\lstinputlisting{src/Pell_main.java}
+
+\section*{Variable Listing:}
+\begin{center}
+\begin{tabular}{ | c | l | c | l |}
+\hline
+	\multicolumn{1}{ | c | }{\textbf{Name}} & 
+	\multicolumn{1}{ | c | }{\textbf{Function}} &
+	\multicolumn{1}{ | c | }{\textbf{Type}} &
+	\multicolumn{1}{ | c | }{\textbf{Scope}} \\
+\hline
+	sc & input handler object that is used for input & Scanner & main() \\
+	N & number of pell series terms & int & main(),display() \\
+	a & first term of pell series  & int & display() \\
+	b & second term of pell series & int & display() \\
+	c & temporary variable that is used for storing tmp value of stuff & int & display() \\
+	px & Pell Class object used to call display() & Pell & main() \\
+\hline
+\end{tabular}
+\end{center}

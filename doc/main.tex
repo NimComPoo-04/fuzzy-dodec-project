@@ -1,0 +1,50 @@
+\documentclass[12pt]{extarticle}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{geometry}
+
+\definecolor{javared}{rgb}{0.6, 0, 0} % for strings
+\definecolor{javagreen}{rgb}{0.25, 0.5, 0.35} % comments
+\definecolor{javapurple}{rgb}{0.5, 0, 0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25, 0.35, 0.75} % docs
+
+\lstset{
+	frame=tb,
+	language=Java,
+	basicstyle=\ttfamily,
+	breaklines=true,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	showstringspaces=false,
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen},
+	showspaces=false,
+	numbersep=10pt,
+	tabsize=2
+}
+
+\newgeometry{margin=1cm}
+
+\title{Computer Project}
+\author{Aanjishnu Bhattacharyya}
+
+\begin{document}
+
+\maketitle
+\input{doc/Kaprekar.tex}
+\pagebreak
+\input{doc/Pell.tex}
+\pagebreak
+\input{doc/Octaprime.tex}
+\pagebreak
+\input{doc/Avarage.tex}
+\pagebreak
+\input{doc/Duplicate.tex}
+\pagebreak
+\input{doc/Mixer.tex}
+\pagebreak
+\input{doc/EqMat.tex}
+\pagebreak
+
+\end{document}
+\restoregeometry

@@ -1,0 +1,46 @@
+\section*{\centering Assignment 5}
+\vspace{15px}
+Vrite a program which takes N integers from the useer in an array and removes the
+duplicate elements from the array and display the new array.\\
+Example:\\
+Enter no of integgers : 7\\
+Input array elements: 1,2,3,1,2,3,4\\
+
+Output
+
+\section*{Algorithm:}
+\textbf{\color{javapurple}Class Duplicate\_main:}\\
+\textbf{Method Main:}\\
+Step 1: create a input handle \\
+Step 2: take the number of elements as input \\
+Step 3: fill up the array with input data \\
+Step 4: create a temporary object and call the apropriate method \\\\
+\textbf{\color{javapurple}Class Duplicate:}\\
+\textbf{Method removeDupAndPrint:}\\
+Step 1: create a string to store out put \\
+Step 2: Iterate through the array. \\
+Step 3: Check the first index of the element in out\\
+Step 4: if it exists in out then don't add else add it.\\
+Step 5: replace the ``[space]" with ``,[space]" and print it\\\\
+
+
+\section*{Source code:}
+\lstinputlisting{src/Duplicate.java}
+\lstinputlisting{src/Duplicate_main.java}
+
+\section*{Variable Listing:}
+\begin{center}
+\begin{tabular}{ | c | l | c | l |}
+\hline
+	\multicolumn{1}{ | c | }{\textbf{Name}} & 
+	\multicolumn{1}{ | c | }{\textbf{Function}} &
+	\multicolumn{1}{ | c | }{\textbf{Type}} &
+	\multicolumn{1}{ | c | }{\textbf{Scope}} \\
+\hline
+	sc & inputt handler & Scanner & main \\
+	num & number of elements of array & int & main \\
+	nx & the array of input data & int[] & main \\
+
+\hline
+\end{tabular}
+\end{center}

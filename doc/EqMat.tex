@@ -1,0 +1,104 @@
+
+\section*{\centering Assignment 8}
+\vspace{15px}
+Two matrices are said to be equal if they have the same dimention and their
+corresponding elements are equal.\\
+For examples, the two matrix A and B given below are equal:
+
+\begin{tabular}{ c c }
+	Matrix A & Matrix B \\
+	\begin{tabular}{|c|c|c|}
+\hline
+		1 & 2 & 3 \\ \hline
+		2 & 4 & 5 \\ \hline
+		3 & 5 & 6 \\ \hline
+	\end{tabular} & 
+	\begin{tabular}{|c|c|c|}
+\hline
+		1 & 2 & 3 \\ \hline
+		2 & 4 & 5 \\ \hline
+		3 & 5 & 6 \\ \hline
+	\end{tabular}\\
+\end{tabular}
+
+Design of class EqMat to check if two matrices are equal or not. Assume that the two matrices
+have the same dimention.\\
+some of the membersof the class are given below:\\
+\begin{tabular}{ll}
+	\textbf{Class name} & \textbf{EqMat} \\
+	\textbf{Data  members/instance}\\
+	\textbf{Members:}\\
+	a[][] & to store integer elements\\
+	m & to store number of rows \\
+	n & to store number of columns\\
+	\textbf{Members functions\ methods:}\\
+	EqMat(int mm, int nn) & parameterized constructor initialize the data\\
+	& members m = mm and n = nn ;\\
+	void readarray() & to enter elemtents in the array \\
+	int check(EqMat p, EqMat q) & checks if the parametarized objects p and q\\
+	& are equal and returns 1 if true otherwise returns 0. \\
+	void print() & displays the arrays elemtents. \\
+\end{tabular}
+Define the class EqMat giving details of constructor(), void readarray(), int check(EqMat, EqMat) and void
+print(). Define the main() function to create objects and call the funcitons accordingly to enable the task.
+
+\section*{Algorithm:}
+\textbf{\color{javapurple}Class EqMat\_main:}\\
+\textbf{Method main:}\\
+Step 1: take input from the user about the row and cols.\\
+Step 2: check if the input is greater than 0 and retake input if not.\\
+Step 3: create a EqMat object and call readarray for input array.\\
+Step 4: repeat the last three steps again for a new object.\\
+Step 5: call print function of the first object.\\
+Step 6: call print function of the second object.\\
+Step 7: check if a.check(b) is equal to 1\\
+Step 8: if the check passes print array are equal\\
+Step 9: if the check fails print array are not equal\\\\
+\textbf{\color{javapurple}Class EqMat:}\\
+\textbf{Method Eqmat:}\\
+Step 1: initialize all object variables\\
+Step 2: create a new object for object a variable\\\\
+\textbf{Method check:}\\
+Step 1: check if the matrix are even same dimentional.\\
+Step 2: if the check fails return 0 ; \\
+Step 3: loop from 0 to p.m using i as variable\\
+Step 4: loop from 0 to q.n using j as variable \\
+Step 5: check if p.a[i][j] is not equal to q.a[i][j]. \\
+Step 6: if the check fails return 0 ;\\
+Step 7: return if the control makes it out of the loops.\\\\
+\textbf{Method print:}\\
+Step 1: loop from 0 through the number of rows using i as var.\\
+Step 2: loop from 0 through the number of cols using j as var.\\
+Step 3: print a[i][j] with a space at the end.\\
+Step 4: print a new line at the end of j var.\\\\
+\textbf{Method readarray:}\\
+Step 1: create a input stream handle.\\
+Step 2: take input in the buffer created in a.\\\\
+
+\section*{Source code:}
+\lstinputlisting{src/EqMat.java}
+\lstinputlisting{src/EqMat_main.java}
+
+\section*{Variable Listing:}
+\begin{center}
+\begin{tabular}{ | c | l | c | l |}
+\hline
+	\multicolumn{1}{ | c | }{\textbf{Name}} & 
+	\multicolumn{1}{ | c | }{\textbf{Function}} &
+	\multicolumn{1}{ | c | }{\textbf{Type}} &
+	\multicolumn{1}{ | c | }{\textbf{Scope}} \\
+\hline
+	a[][] & integer matrix storer & int[][] & EqMat:object\\
+	m & number of rows & int & EqMat:object, main \\
+	n & number of cols & int & EqMat:object, main \\
+	mm & a temporary variable for m & int & EqMat \\
+	nn & a temporary variable for n & int & EqMat \\
+	p & input for check function & EqMat & check \\
+	q & input for check function & EqMat & check \\
+	i & loop control varible & int & print \\
+	j & loop control varible & int & print \\
+	sc & Input handle varable & Scanner & readarray, main \\
+	a,b & object for testing & main & main \\
+\hline
+\end{tabular}
+\end{center}
