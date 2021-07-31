@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Algorithm:</TITLE>
+<META NAME="description" CONTENT="Algorithm:">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Source code:</A>
+<B> Up:</B> <A
+ HREF="main.html">Computer Project</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Assignment 1</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00020000000000000000">
+Algorithm:</A>
+</H1>
+<SPAN  CLASS="textbf">
+<FONT COLOR="#800059">Class Kaprekar_main:</FONT></SPAN>
+<BR><SPAN  CLASS="textbf">Method Main:</SPAN>
+<BR>
+Step 1: declare lr and ur as lower and upper limit respectively
+<BR>
+Step 2: accept input from the user the lower and upper limit in lr and ur
+<BR>
+Step 3: check if the numbers are greater than zero and ur &gt; lr. if not then renter
+<BR>
+Step 4: initialize a Kaprekar object.
+<BR>
+Step 5: call the display method of Kaprekar object
+<BR>
+<BR><SPAN  CLASS="textbf">
+<FONT COLOR="#800059">Class Kaprekar:</FONT></SPAN>
+<BR><SPAN  CLASS="textbf">Method display:</SPAN>
+<BR>
+Step 1: declare i as a loop control variable 
+<BR>
+Step 2: start a `for' loop from lower_range to upper_range with i as the loop control.
+<BR>
+Step 3: call iskaprekar method passing i as the actual parameter. 
+<BR>
+Step 4: if iskaprekar returned true then print the number to screen. 
+<BR>
+<BR><SPAN  CLASS="textbf">Method iskaprekar:</SPAN>
+<BR>
+Step 1: store the square of the formal parameter in sq. 
+<BR>
+Step 2: store the length of sq in len bu using the formula log10(sq)+1 = len. 
+<BR>
+Step 3: store the value of sq % 10 ˆ len/2 + 1 in part1 if len is odd. 
+<BR>
+Step 4: store the value of sq % 10 ˆ len/2 in part2 if len is even. 
+<BR>
+Step 5: return the value of part1 + part2 == x
+<BR>
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

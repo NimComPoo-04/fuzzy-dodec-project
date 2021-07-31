@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Assignment 7</TITLE>
+<META NAME="description" CONTENT="Assignment 7">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node26.html">
+<LINK REL="previous" HREF="node24.html">
+<LINK REL="next" HREF="node26.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node26.html">Algorithm:</A>
+<B> Up:</B> <A
+ HREF="main.html">Computer Project</A>
+<B> Previous:</B> <A
+ HREF="node24.html">Variable Listing:</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION000250000000000000000">
+<DIV class="CENTER">Assignment 7</DIV></A>
+</H1>
+<BR>
+Write a program which takes n integers as input(max 50 integers)
+and stores them in an array data from index 0 to n-1. Now we want to 
+rearrange the integers in the following way:- find the minmum
+value and put it in position (n/2) [for odd number of elements]
+oand position (n/2-1) [for even number number elements]) ;
+find the second smallest value and put it to its right;
+then the third small and place it to its lieft and so 
+on altering right and left until all the integers are done.
+<BR>
+<BR>
+Initial array:- (size: 7)
+<BR><TABLE class="PAD  BORDER" style="">
+<TR><TD CLASS="LEFT">7</TD>
+<TD CLASS="CENTER">3</TD>
+<TD CLASS="LEFT">1</TD>
+<TD CLASS="LEFT">6</TD>
+<TD CLASS="CENTER">4</TD>
+<TD CLASS="LEFT">2</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+Intial array:- (size: 6)
+<BR><TABLE class="PAD  BORDER" style="">
+<TR><TD CLASS="LEFT">7</TD>
+<TD CLASS="CENTER">3</TD>
+<TD CLASS="LEFT">1</TD>
+<TD CLASS="LEFT">6</TD>
+<TD CLASS="CENTER">4</TD>
+<TD CLASS="LEFT">2</TD>
+<TD CLASS="LEFT">5</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+After re-arrangement of the first array becomes
+<BR><TABLE class="PAD  BORDER" style="">
+<TR><TD CLASS="LEFT">6</TD>
+<TD CLASS="CENTER">3</TD>
+<TD CLASS="LEFT">1</TD>
+<TD CLASS="LEFT">2</TD>
+<TD CLASS="CENTER">4</TD>
+<TD CLASS="LEFT">7</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+After re-arrangement the second array becomes
+<BR><TABLE class="PAD  BORDER" style="">
+<TR><TD CLASS="LEFT">7</TD>
+<TD CLASS="CENTER">5</TD>
+<TD CLASS="LEFT">3</TD>
+<TD CLASS="LEFT">1</TD>
+<TD CLASS="CENTER">2</TD>
+<TD CLASS="LEFT">4</TD>
+<TD CLASS="LEFT">6</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node26.html">Algorithm:</A>
+<B> Up:</B> <A
+ HREF="main.html">Computer Project</A>
+<B> Previous:</B> <A
+ HREF="node24.html">Variable Listing:</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>
