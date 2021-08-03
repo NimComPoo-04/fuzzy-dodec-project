@@ -1,0 +1,79 @@
+\section*{\centering Assignment 9}
+\vspace{15px}
+Write a program to declare a square matrix A[][] of order (M x M) where 'M'
+is the number of rows and the number of colums such that M must be greater 
+than 2 and less than 20. Allow the user to input integers into this matrix.
+Display appropriate error message for an invalid input. Perform the following
+tasks:\\\\
+a) Display the input matrix.\\\\
+b) Create a mirror image matrix.\\\\
+c) Display the mirror image matrix\\\\
+Test your program with the sample data and some random data:\\\\
+\textbf{Example 1:}\\\\
+INPUT	:	M = 3\\\\
+\begin{tabular}{ccc}
+	4 & 16 & 12 \\
+	8 & 2 & 14 \\
+	4 & 1 & 3 \\
+\end{tabular}\\\\\\
+OUPUT	:\\\\
+ORIGINAL MATRIX\\\\
+\begin{tabular}{ccc}
+	4 & 16 & 12 \\
+	8 & 2 & 14 \\
+	4 & 1 & 3 \\
+\end{tabular}\\\\
+MIRROR IMAGE MATRIX\\\\
+\begin{tabular}{ccc}
+	12 & 16 & 4 \\
+	14 & 2 & 8 \\
+	3 & 1 & 4 \\
+\end{tabular}
+
+\section*{Algorithm:}
+\textbf{\color{javapurple}Class Mirror\_main:}\\
+\textbf{Method Main:}\\
+Step 1: create a input handle using scanner\\
+Step 2: input the number of chracters\\
+Step 3: create a 2d-array and fill it with data.\\ 
+Step 4: check and repromt if the size if greater than 22 or lesser than 2.\\
+Step 5: create matrix object.\\
+Step 6: display the matrices.\\\\
+\textbf{\color{javapurple}Class Mirror:}\\
+\textbf{Method display\_original:}\\
+Step 1: loop from 0 to M using i\\
+Step 2: loop from 0 to M using j\\
+Step 3: print A[i][j]\\
+Step 4: after second loop print new line\\\\
+\textbf{Method display\_mirror:}\\
+Step 1: loop from 0 to M using i\\
+Step 2: loop from 0 to M using j\\
+Step 3: print A[i][M-1-j] \\
+Step 4: after second loop print new line\\\\
+\textbf{Method Mirror:}\\
+Step 1: take M and A[][] as a input.\\
+Step 2: initialize object a new buffer called A with the size M x M.\\ 
+Step 3: fill the index of object's A[i/M][i\%M] = A[i/M][i\%M]\\
+Step 4: initialize object's M to be M\\\\
+
+\section*{Source code:}
+\lstinputlisting{src/Mirror.java}
+\lstinputlisting{src/Mirror_main.java}
+
+\section*{Variable Listing:}
+\begin{center}
+\begin{tabular}{ | c | l | c | l |}
+\hline
+	\multicolumn{1}{ | c | }{\textbf{Name}} & 
+	\multicolumn{1}{ | c | }{\textbf{Function}} &
+	\multicolumn{1}{ | c | }{\textbf{Type}} &
+	\multicolumn{1}{ | c | }{\textbf{Scope}} \\
+\hline
+	A & the matrix storage & int[][] & Mirror:object, Mirror, main\\
+	M & the size of the matrix & int[][] & Mirror:object, Mirror, main\\
+	i,j & index value of the for loops & display\_original, display\_mirror\\
+	sc & input handler & Scanner & main\\
+	mr & input Mirror object & Mirror & main\\
+\hline
+\end{tabular}
+\end{center}

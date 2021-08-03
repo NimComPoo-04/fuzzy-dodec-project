@@ -34,23 +34,26 @@ After re-arrangement the second array becomes\\
 \end{tabular}
 
 \section*{Algorithm:}
-\textbf{\color{javapurple}Class Avarage\_main:}\\
+\textbf{\color{javapurple}Class Alternate\_main:}\\
 \textbf{Method Main:}\\
-Step 1: create a input handle to accept input from the user\\
-Step 2: take the input of number of students in N \\
-Step 3: Check if the input makes sense if not exit \\
-Step 4: create temporary and call displaySmall\\\\
-\textbf{\color{javapurple}Class Avarage:}\\
-\textbf{Method displaySmall:}\\
-Step 1: create 2 values avgl and namel to store the name and the avarage of least student\\
-Step 2: start a loop and continue looping until N is 0.\\
-Step 3: take input of 5 subjects from the stdin.\\
-Step 4: create a temporary variable and store the avarage of the 5 subjects.\\
-Step 5: check if the avarage of tmp variable is lower than the avgl.\\
-Step 6: if the check passes then replace the value of avgl with avg. \\
-Step 7: and also replace the name depending on Step 5 condition. \\
-Step 8: reduce N by 1.\\
-Step 9: after completing the whole loop print the results.\\\\
+Step 1: create a input handle from the console\\
+Step 2: create variables to hold array and sizes\\
+Step 3: take input from user if the input is bad repromt\\
+Step 4: call fill method of the Alternate class.\\
+Step 5: print the nx buff.\\\\
+\textbf{\color{javapurple}Class Alternate:}\\
+\textbf{Method fill:}\\
+Step 1: create a variable called pos.
+Step 2: check if intput is array length is even 
+Step 3: if the check passes then set pos to arr.length/2 - 1
+Step 3: else set pos to arr.length/2
+Step 4: loop from 0 to arr.length using i
+Step 5: loop from 0 to arr.length - 1 using j
+Step 6: swap arr[j] and arr[j+1] if arr[j] > arr[j+1]
+Step 7: after loop start new loop from 0 to nx.length using i
+Step 8: set pos = pos - i * (1 if i is even else -1)
+Step 9: set nx[pos] = arr[i]
+Step 10: complete loop.
 
 \section*{Source code:}
 \lstinputlisting{src/Alternate.java}

@@ -1,0 +1,76 @@
+\section*{\centering Assignment 10}
+\vspace{15px}
+A company manufactures packingg cartons in four sizes, i.e. cartons to 
+accommodate 6 boxes, 12 boxes, 24 boxes and 48 boxes. Desiggn a program to 
+accept the number of boxes to be packed (N) by the user (maximum up to 
+1000 boxes) and display the break-up of the cartons used in descending order
+of capacity (i.e. preference should be given to the highest capacity
+available, adn if boxes left are less than 6, an extra carton of capacity
+6 should be used.)\\\\
+Test your program with the following data and some random data:\\\\
+\textbf{Example 1:}\\\\
+\textbf{INPUT:}	N = 726\\
+\textbf{OUTPUT:}	48 x 15 = 720\\
+			6 x 1 = 6\\
+	Remaining boxes	= 0\\
+	Total number of boxes	= 726\\
+	Toatl number of cartons = 16\\\\
+\textbf{Example 2:}\\\\
+\textbf{INPUT:}	N = 726\\
+\textbf{OUTPUT:}	48 x 15 = 720\\
+			6 x 1 = 6\\
+	Remaining boxes	= 0\\
+	Total number of boxes	= 726\\
+	Toatl number of cartons = 16\\
+
+\section*{Algorithm:}
+\textbf{\color{javapurple}Class Company\_main:}\\
+\textbf{Method Main:}\\
+Step 1: create a input handle using Scanner class\\
+Step 2: take input the number of boxes.\\
+Step 3: check if the input is sane. if the input is not sane print INVALID INPUT.\\
+Step 4: create a compmany object using the N as intput.\\ 
+Step 5: call calculate using company object.\\
+Step 6: call pretty\_print using company object.\\\\
+\textbf{\color{javapurple}Class Company:}\\
+\textbf{Method calculate:}\\
+Step 1: create a copy of N locally.\\
+Step 2: loop from 0 to this.cartons.length using the variable i\\
+Step 3: execute the statement num\_cartons[i] = N / cartons[i]\\
+Step 4: execute the statement num\_carton++\\
+Step 5: execute the statement N \%= cartons[i]\\
+Step 6: set remainder to N\\\\
+\textbf{Method pretty\_print:}\\
+Step 1: loop from 0 to this.num\_cartons.lengths using the variable i\\
+Step 2: execute print statement only if num\_cartons[i] not equals 0\\
+Step 3: print the output in a fancy format.\\\\
+\textbf{Method Company:}\\
+Step 1: initialize cartons with [48 24 12 6] for carton listings.\\
+Step 2: initialize num\_cartons with a new buffer of number of type of cartons\\
+Step 4: initialize N with input N.\\
+Step 5: initialize num\_carton to zero\\
+
+\section*{Source code:}
+\lstinputlisting{src/Company.java}
+\lstinputlisting{src/Company_main.java}
+
+\section*{Variable Listing:}
+\begin{center}
+\begin{tabular}{ | c | l | c | l |}
+\hline
+	\multicolumn{1}{ | c | }{\textbf{Name}} & 
+	\multicolumn{1}{ | c | }{\textbf{Function}} &
+	\multicolumn{1}{ | c | }{\textbf{Type}} &
+	\multicolumn{1}{ | c | }{\textbf{Scope}} \\
+\hline
+	sc & input handler object that is used for input & Scanner & main \\
+	N & number of box & int & main,Company:obj,calculate \\
+	c & Company obbject createor & Company & main\\
+	i,j & iterator control variable & pretty\_print & pretty\_print, calculate\\
+	cartons & the varid capacity boxes list & int[] & Company:obj\\ 
+	num\_cartons & the magnitude of each boxes & int[] & Company:obj\\ 
+	num\_carton & this is the total number of cartons that are required & int & Company:obj\\
+	remainder & the remaining boxes after filling & int & Company:obj\\
+\hline
+\end{tabular}
+\end{center}

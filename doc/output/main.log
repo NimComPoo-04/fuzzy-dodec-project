@@ -1,35 +1,572 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=latex 2021.7.16)  31 JUL 2021 12:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.16)  4 AUG 2021 01:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCo
-de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
-{\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
-documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
- tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
-\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input  main.aux
- (./main.aux
-! You can't use `\spacefactor' in vertical mode.
-\@->\spacefactor 
-                 \@m {}
-l.2 \@
-      writefile{lol}{\contentsline {lstlisting}{src/Kaprekar.java}{1}{}\prot...
+**doc/main.tex
+(./doc/main.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+(/usr/share/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen138
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen139
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\lst@mode=\count187
+\lst@gtempboxa=\box47
+\lst@token=\toks16
+\lst@length=\count188
+\lst@currlwidth=\dimen140
+\lst@column=\count189
+\lst@pos=\count190
+\lst@lostspace=\dimen141
+\lst@width=\dimen142
+\lst@newlines=\count191
+\lst@lineno=\count192
+\lst@maxwidth=\dimen143
 
-? 
-! Emergency stop.
-\@->\spacefactor 
-                 \@m {}
-l.2 \@
-      writefile{lol}{\contentsline {lstlisting}{src/Kaprekar.java}{1}{}\prot...
-End of file on the terminal!
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count193
+\lst@skipnumbers=\count194
+\lst@framebox=\box48
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
- 
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count195
+\Gm@cntv=\count196
+\c@Gm@tempcnt=\count197
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks17
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: 
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(28.45274pt, 557.38951pt, 28.45274pt)
+* v-part:(T,H,B)=(28.45274pt, 738.0645pt, 28.45274pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=557.38951pt
+* \textheight=738.0645pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count198
+\l__pdf_internal_box=\box49
+)
+(doc/output/main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+\c@lstlisting=\count199
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count266
+\scratchdimen=\dimen152
+\scratchbox=\box50
+\nofMPsegments=\count267
+\nofMParguments=\count268
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count269
+\MPscratchDim=\dimen153
+\MPnumerator=\count270
+\makeMPintoPDFobject=\count271
+\everyMPtoPDFconversion=\toks19
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(28.45274pt, 557.38951pt, 28.45274pt)
+* v-part:(T,H,B)=(28.45274pt, 738.0645pt, 28.45274pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=557.38951pt
+* \textheight=738.0645pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7> on input line 33.
+(./doc/Kaprekar.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--28
+
+ []
+
+(./src/Kaprekar.java
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <6> on input line 1.
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+(./src/Kaprekar_main.java [2])) [3] (./doc/Pell.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--23
+
+ []
+
+(./src/Pell.java [4]) (./src/Pell_main.java)) [5] (./doc/Octaprime.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--30
+
+ []
+
+(./src/Octaprime.java [6]) (./src/Octaprime_main.java) [7]) [8]
+(./doc/Avarage.tex
+Underfull \hbox (badness 10000) in paragraph at lines 10--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--27
+
+ []
+
+(./src/Avarage.java [9]) (./src/Avarage_main.java)) [10] (./doc/Duplicate.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--25
+
+ []
+
+(./src/Duplicate.java) [11] (./src/Duplicate_main.java)) [12] (./doc/Mixer.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--47
+
+ []
+
+[13] (./src/Mixer.java [14]) (./src/Mixer_main.java) [15]) [16]
+(./doc/Alternate.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--57
+
+ []
+
+(./src/Alternate.java [17]) (./src/Alternate_main.java) [18]) [19]
+(./doc/EqMat.tex
+Overfull \hbox (0.16792pt too wide) in paragraph at lines 23--43
+[] \OT1/cmr/m/n/12 De-fine the class Eq-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--76
+
+ []
+
+[20] (./src/EqMat.java [21]) (./src/EqMat_main.java [22])) [23]
+(./doc/Mirror.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--58
+
+ []
+
+[24] (./src/Mirror.java [25]) (./src/Mirror_main.java) [26]) [27]
+(./doc/Company.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--52
+
+ []
+
+[28] (./src/Company.java [29]) (./src/Company_main.java)
+Overfull \hbox (28.72884pt too wide) in paragraph at lines 59--76
+ [] 
+ []
+
+[30]) [31] (doc/output/main.aux) ) 
 Here is how much of TeX's memory you used:
- 19 strings out of 478995
- 396 string characters out of 5864777
- 283038 words of memory out of 5000000
- 17605 multiletter control sequences out of 15000+600000
- 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 3438 strings out of 478994
+ 49301 string characters out of 5864751
+ 795793 words of memory out of 5000000
+ 20859 multiletter control sequences out of 15000+600000
+ 409358 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 12i,0n,15p,563b,10s stack positions out of 5000i,500n,10000p,200000b,80000s
-No pages of output.
+ 68i,12n,74p,218b,1666s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmtt12.pfb>
+Output written on doc/output/main.pdf (31 pages, 133868 bytes).
+PDF statistics:
+ 128 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

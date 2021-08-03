@@ -37,8 +37,8 @@
 \doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-24000}{QQ2-1-36}{Variable Listing:}}{14}\relax 
 \doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-25000}{QQ2-1-37}{\centering  \linepenalty 10 Assignment 7}}{15}\relax 
 \doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-26000}{QQ2-1-38}{Algorithm:}}{15}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-27000}{QQ2-1-39}{Source code:}}{16}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-27001}{}{src/Alternate.java}}{16}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-27000}{QQ2-1-39}{Source code:}}{15}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-27001}{}{src/Alternate.java}}{15}\relax 
 \doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-27033}{}{src/Alternate_main.java}}{16}\relax 
 \doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-28000}{QQ2-1-42}{Variable Listing:}}{16}\relax 
 \doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-29000}{QQ2-1-43}{\centering  \linepenalty 10 Assignment 8}}{17}\relax 
@@ -47,3 +47,15 @@
 \doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-31001}{}{src/EqMat.java}}{18}\relax 
 \doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-31060}{}{src/EqMat_main.java}}{18}\relax 
 \doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-32000}{QQ2-1-48}{Variable Listing:}}{18}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-33000}{QQ2-1-49}{\centering  \linepenalty 10 Assignment 9}}{20}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-34000}{QQ2-1-50}{Algorithm:}}{20}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-35000}{QQ2-1-51}{Source code:}}{21}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-35001}{}{src/Mirror.java}}{21}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-35053}{}{src/Mirror_main.java}}{21}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-36000}{QQ2-1-54}{Variable Listing:}}{21}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-37000}{QQ2-1-55}{\centering  \linepenalty 10 Assignment 10}}{23}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-38000}{QQ2-1-56}{Algorithm:}}{23}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-39000}{QQ2-1-57}{Source code:}}{24}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-39001}{}{src/Company.java}}{24}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-39053}{}{src/Company_main.java}}{24}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-40000}{QQ2-1-60}{Variable Listing:}}{24}\relax 
