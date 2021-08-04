@@ -22,7 +22,7 @@ run-each::
 
 document: $(DOC)
 	pdflatex --output-directory doc/output $^
-	#make4ht --output-dir doc/output $^
+	make4ht --output-dir doc/output $^
 
 clean:
 	- rm class/* -f
