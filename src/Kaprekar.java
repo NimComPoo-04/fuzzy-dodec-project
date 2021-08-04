@@ -28,7 +28,7 @@ public class Kaprekar
 		int len = (int)(Math.log10(sq)+1) ; // the total number of digits in sq
 
 		// the half of the number using mathematics
-		int part1 = sq % (int)Math.pow(10, (int)Math.floor((len * 1.0)/2.0) + 1) ;
+		int part1 = sq % (int)Math.pow(10, (int)Math.floor((len * 1.0)/2.0) + (len % 2 == 1 ? 1 : 0)) ;
 		int part2 = sq / (int)Math.pow(10, (int)Math.ceil((len * 1.0)/2.0)) ;
 
 		//System.out.println(part2+" "+part1) ;

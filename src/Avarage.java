@@ -4,7 +4,8 @@ public class Avarage
 	/* display smallest */
 	void displaySmall(Scanner sc, int N)
 	{
-		int avgl = 0 ; /* least avarage of the const */
+		// a very big number which is way above 100 so it will accomodate
+		int avgl = 0xffffff ; /* least avarage of the const */
 		String namel = "" ; /* name of the person begin tortured by society */
 		while(N!=0)
 		{
