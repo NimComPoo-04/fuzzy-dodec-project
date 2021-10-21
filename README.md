@@ -1,2 +1,1 @@
-# fuzzy-dodec-project
-School Homework
+# School Project for my life
