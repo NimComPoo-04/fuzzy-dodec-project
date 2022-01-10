@@ -17,6 +17,7 @@ compl:
 	$(JC) $(JCF) $(X)
 
 run:
+	@echo
 	$(JI) $(JIF) $(X)
 
 clean:

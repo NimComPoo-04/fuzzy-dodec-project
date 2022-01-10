@@ -13,6 +13,7 @@ public class SpecialPureNumber_main
 		if(n > 10 || n <= 0)
 		{
 			System.out.println("OUT OF RANGE") ;
+			return ;
 		}
 
 		int i = 10 ;
