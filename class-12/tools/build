@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Generate documentation pdf
+
+files=`ls src`
+
+sorted_files=`for wrd in $files
+do
+	head src/$wrd -n 2 | tail -n 1 | cut -d " " -f 2 | sed -e "s/\./\t$wrd/g"
+done | sort -n | cut -d "	" -f 2`
+
+for wrd in $sorted_files
+do
+	./tools/gendoc ./src/$wrd > ./doc/$wrd.ms
+done
+
+cat ./doc/title.ms `for wrd in $sorted_files; do echo ./doc/$wrd.ms; done` > ./doc/foo.ms
+
+groff -t -Tpdf -dpaper=a4 -P-pa4 -m ms ./doc/foo.ms > foo.pdf

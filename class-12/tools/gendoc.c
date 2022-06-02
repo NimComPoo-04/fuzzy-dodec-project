@@ -271,16 +271,17 @@ doc_t documentize(element_t *stream, size_t length)
 		{
 			if(stream[i-1].type == SYM && stream[i-2].type == SYM)
 			{
-				if(!(strncmp(stream[i-2].value.value, "import", 6) ||
-							strncmp(stream[i-2].value.value, "return", 6)))
+				if(!(strncmp(stream[i-2].value.value, "import", 6) == 0 ||
+							strncmp(stream[i-2].value.value, "return", 6) == 0))
 				{
 					lst_t var = {stream[i-2].value, stream[i-1].value, (str_t){0, 0}, (str_t){0, 0}};
-					if(dx.scope_len >= 0)
-						var.scope = dx.scope[dx.scope_len-1];
-					if(dx.comment_len >= 0)
+					if(dx.scope_len > 0)
 					{
-						var.desc = dx.comment[dx.comment_len-1].value;
-						dx.comment_len--;
+						var.scope = dx.scope[dx.scope_len-1];
+					}
+					if(dx.comment_len > 0)
+					{
+						var.desc = dx.comment[--dx.comment_len].value;
 					}
 					dx.variable[dx.variable_len++] = var;
 				}
@@ -291,15 +292,18 @@ doc_t documentize(element_t *stream, size_t length)
 			if(stream[i-1].type == SYM && stream[i-2].type == SYM)
 			{
 				lst_t var = {stream[i-2].value, stream[i-1].value, (str_t){0, 0}, (str_t){0, 0}};
-				if(dx.scope_len >= 0)
-					var.scope = dx.scope[dx.scope_len-1];
-				if(dx.comment_len >= 0)
+				if(dx.scope_len > 0)
 				{
-					var.desc = dx.comment[dx.comment_len-1].value;
-					dx.comment_len--;
+					var.scope = dx.scope[dx.scope_len-1];
+				}
+				if(dx.comment_len > 0)
+				{
+					var.desc = dx.comment[--dx.comment_len].value;
 				}
 				dx.variable[dx.variable_len++] = var;
 			}
+			while(stream[i].value.value[0] != ';')
+				i++;
 		}
 		else if(stream[i].type == SEP && stream[i].value.value[0] == '{')
 		{
@@ -326,6 +330,14 @@ void code_prnt(str_t s)
 	if(s.value == NULL) return;
 	for(size_t i = 0; i < s.length; i++)
 	{
+		// we don't need too much comment now do we lol
+		if(strncmp(s.value+i, "/*", 2) == 0)
+		{
+			while(strncmp(s.value+i, "*/", 2) != 0)
+				i++;
+			i += 2;
+		}
+
 		putc(s.value[i], stdout);
 		if(s.value[i] == '\n') printf(".br\n");
 	}
@@ -339,6 +351,7 @@ void docs_prnt(str_t s)
 
 	printf(".SH\n");
 	printf(".DS C\n");
+	printf(".LG\n");
 	printf(".LG\n");
 	printf(".LG\n");
 	printf(".B\n");
@@ -357,10 +370,15 @@ void docs_prnt(str_t s)
 	printf(".NL\n");
 	printf(".DE\n");
 
-	printf(".PP");
+	printf(".LP");
 
-	for(; i < s.length; i++)
+	for(; i < s.length-1; i++)
 	{
+		if(s.value[i] == '\n' && s.value[i+1] == '\n')
+		{
+			 printf("\n.br\n");
+			 i+=2;
+		}
 		putc(s.value[i], stdout);
 	}
 }
@@ -368,11 +386,15 @@ void docs_prnt(str_t s)
 // prints the document as groff lol
 void document_prnt(doc_t *d, str_t source_code)
 {
+	printf("\n\n.nr PS 12500\n");
 	docs_prnt(d->docs);
 	printf("\n\n");
 
+	printf("\n.bp\n");
+
 	printf(".SH\n");
 	printf(".DS C\n");
+	printf(".LG\n");
 	printf(".LG\n");
 	printf(".B\n");
 	printf("Algorithm\n");
@@ -408,8 +430,11 @@ void document_prnt(doc_t *d, str_t source_code)
 	}
 	printf("Step %d:  End\n", steps);
 
+	printf("\n.bp\n");
+
 	printf(".SH\n");
 	printf(".DS C\n");
+	printf(".LG\n");
 	printf(".LG\n");
 	printf(".B\n");
 	printf("Source Code\n");
@@ -423,22 +448,25 @@ void document_prnt(doc_t *d, str_t source_code)
 	printf("\n.fam\n");
 	printf(".NL\n");
 
+	printf("\n.bp\n");
+
 	printf(".SH\n");
 	printf(".DS C\n");
+	printf(".LG\n");
 	printf(".LG\n");
 	printf(".B\n");
 	printf("Varible Listing\n");
 	printf(".NL\n");
 	printf(".DE\n");
 
-	printf("\n.PP\n");
+	printf("\n.LP\n");
 
 	printf(".TS\n");
 	printf("expand center tab(|);\n");
-	printf("- - - -\n");
-	printf("|cb |cb |cb |cb|\n");
-	printf("- - - -\n");
-	printf("|l |l |l |l|.\n");
+	printf("- - - - -\n");
+	printf("|cb |cb s| cb |cb|\n");
+	printf("- - - - -\n");
+	printf("|l |l s| l |l|.\n");
 	printf("Name|Function|Type|Scope\n");
 	for(int i = 0; i < d->variable_len; i++)
 	{
@@ -452,6 +480,7 @@ void document_prnt(doc_t *d, str_t source_code)
 		printf("\n");
 	}
 	printf(".TE\n");
+	printf("\n.bp\n");
 }
 
 ///////////// Stuff ///////////
