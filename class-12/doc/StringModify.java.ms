@@ -203,6 +203,16 @@ public class StringModify
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class StringModify_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -298,21 +308,21 @@ Name|Function|Type|Scope
 st|T{
  original string
 T}|String|StringModify
-sc|T{
- Input Handler
-T}|Scanner|main
-opt|T{
- option of menuentry
-T}|int|main
-s|T{
- generate an object of StringModify using that sentence
-T}|StringModify|main
-w|T{
- the new string that needs to be attached or removed
-T}|String|main
-pos|T{
- position of the attachment or removal
-T}|int|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp

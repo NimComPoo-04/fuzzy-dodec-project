@@ -147,7 +147,7 @@ public class Matrix
 	{
 		// accpting input from user
 		// Matrix object
-		Matrix m = readMat();
+		Matrix m = Matrix.readMat();
 
 		// displaying original matrix
 		System.out.println("\nOriginal Matrix: ");

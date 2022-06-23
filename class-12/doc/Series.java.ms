@@ -317,6 +317,16 @@ public class Series extends Number
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Series_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -383,12 +393,12 @@ T}|int|Number
 i|T{
  create an iterator
 T}|int|calProd
-sc|T{
- input handler
-T}|Scanner|main
-s|T{
- series object
-T}|Series|main
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp

@@ -46,7 +46,7 @@ public class BinOdd
 		// if any big odds are encountered print it
 		while(lower_limit < upper_limit)
 		{
-			if(isBinOdd(lower_limit))
+			if(BinOdd.isBinOdd(lower_limit))
 				System.out.println(lower_limit);
 			lower_limit++;
 		}

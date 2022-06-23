@@ -380,6 +380,16 @@ public class Date
 .br
 	// manages main input and output
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Date_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -410,7 +420,7 @@ public class Date
 .br
 		// date array
 .br
-		int[] date = parse_input(str_date);
+		int[] date = Date.parse_input(str_date);
 .br
 		
 .br
@@ -517,24 +527,24 @@ T}|String[]|parse_input
 di|T{
  initialize an int array
 T}|int[]|parse_input
-sc|T{
- input system
-T}|Scanner|main
-str_date|T{
- System.out.print("date: ");
-T}|String|main
-jan_1st|T{
- day of first january
-T}|String|main
-date|T{
- date array
-T}|int[]|main
-d|T{
- gnenrate object
-T}|Date|main
-new_day|T{
- get generated day
-T}|String|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
@@ -785,6 +795,16 @@ public class TimeAdd
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class TimeAdd_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -860,9 +880,9 @@ T}|Scanner|accept
 x|T{
  add and store the value of this and t
 T}|TimeAdd|timeAdd
-t|T{
- Timeadds
-T}|TimeAdd[]|main
+|T{
+
+T}||
 .TE
 
 .bp
@@ -994,6 +1014,16 @@ public class BinOdd
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class BinOdd_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -1028,7 +1058,7 @@ public class BinOdd
 .br
 		{
 .br
-			if(isBinOdd(lower_limit))
+			if(BinOdd.isBinOdd(lower_limit))
 .br
 				System.out.println(lower_limit);
 .br
@@ -1062,15 +1092,15 @@ expand center tab(|);
 - - - - -
 |l |l s| l |l|.
 Name|Function|Type|Scope
-sc|T{
- input handler
-T}|Scanner|main
-upper_limit|T{
- upper limit
-T}|int|main
-lower_limit|T{
- lower limit
-T}|int|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
@@ -1439,6 +1469,16 @@ public class Matrix
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Matrix_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -1447,7 +1487,7 @@ public class Matrix
 .br
 		// Matrix object
 .br
-		Matrix m = readMat();
+		Matrix m = Matrix.readMat();
 .br
 
 .br
@@ -1524,9 +1564,9 @@ T}|int|readMat
 m|T{
  matrix object for matrix operations
 T}|Matrix|readMat
-m|T{
- Matrix object
-T}|Matrix|main
+|T{
+
+T}||
 .TE
 
 .bp
@@ -1735,6 +1775,16 @@ public class StringModify
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class StringModify_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -1830,21 +1880,21 @@ Name|Function|Type|Scope
 st|T{
  original string
 T}|String|StringModify
-sc|T{
- Input Handler
-T}|Scanner|main
-opt|T{
- option of menuentry
-T}|int|main
-s|T{
- generate an object of StringModify using that sentence
-T}|StringModify|main
-w|T{
- the new string that needs to be attached or removed
-T}|String|main
-pos|T{
- position of the attachment or removal
-T}|int|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
@@ -2149,6 +2199,16 @@ public class SumDigit
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class SumDigit_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -2236,15 +2296,15 @@ T}|int|digitSum
 digits|T{
  return the added digits
 T}|int|genNum
-sc|T{
- input handler
-T}|Scanner|main
-s|T{
- call genNum and display the value
-T}|SumDigit|main
-digits|T{
-stores the digits
-T}|int|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
@@ -2617,6 +2677,16 @@ public class Sentences
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Sentences_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -2718,15 +2788,15 @@ T}|String[]|getCommonWord
 x|T{
  generated common words formated output
 T}|String|getCommonWord
-sc|T{
- input handler
-T}|Scanner|main
-se|T{
- setnece object
-T}|Sentences|main
-x|T{
- composited output
-T}|String|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
@@ -3036,6 +3106,16 @@ public class Mix
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Mix_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -3111,15 +3191,15 @@ T}|int|Mix
 sc|T{
  input handler
 T}|Scanner|feedword
-P|T{
- P in the mix_word
-T}|Mix|main
-Q|T{
- Q in the mix_word
-T}|Mix|main
-m|T{
- the mix object for computation
-T}|Mix|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
@@ -3460,6 +3540,16 @@ public class FiboPrime
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class FiboPrime_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -3520,9 +3610,9 @@ T}|int|displayFiboPrimes
 fb|T{
  fibo accumulator
 T}|int|displayFiboPrimes
-sc|T{
- Input handler
-T}|Scanner|main
+|T{
+
+T}||
 .TE
 
 .bp
@@ -3935,6 +4025,16 @@ public class MxN
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class MxN_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -4064,18 +4164,18 @@ T}|int|display
 j|T{
  index of the cols
 T}|int|display
-sc|T{
- input handler
-T}|Scanner|main
-m|T{
- object of MxN
-T}|MxN|main
-i|T{
- row iterator
-T}|int|main
-j|T{
- col iterator
-T}|int|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
@@ -4455,6 +4555,16 @@ public class ToHex extends BinHex
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class ToHex_main
+.br
+{
+.br
 	public static void main(String arg[])
 .br
 	{
@@ -4536,12 +4646,12 @@ T}|String|display
 hex_map|T{
  a hex character mapper
 T}|char[]|display
-sc|T{
- input handler
-T}|Scanner|main
-th|T{
- to hex object
-T}|ToHex|main
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
@@ -5001,6 +5111,16 @@ public class Encrypt extends Sentence
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Encrypt_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -5102,15 +5222,15 @@ T}|int|else
 x|T{
  duplicate letters
 T}|char|if
-sc|T{
- input handler
-T}|Scanner|main
-line|T{
- line input
-T}|String|main
-e|T{
- encrypt object creation
-T}|Encrypt|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
@@ -5433,6 +5553,16 @@ public class Series extends Number
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Series_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -5499,12 +5629,12 @@ T}|int|Number
 i|T{
  create an iterator
 T}|int|calProd
-sc|T{
- input handler
-T}|Scanner|main
-s|T{
- series object
-T}|Series|main
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp

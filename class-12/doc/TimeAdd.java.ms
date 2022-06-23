@@ -245,6 +245,16 @@ public class TimeAdd
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class TimeAdd_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -320,9 +330,9 @@ T}|Scanner|accept
 x|T{
  add and store the value of this and t
 T}|TimeAdd|timeAdd
-t|T{
- Timeadds
-T}|TimeAdd[]|main
+|T{
+
+T}||
 .TE
 
 .bp

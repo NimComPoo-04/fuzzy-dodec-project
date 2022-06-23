@@ -407,6 +407,16 @@ public class MxN
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class MxN_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -536,18 +546,18 @@ T}|int|display
 j|T{
  index of the cols
 T}|int|display
-sc|T{
- input handler
-T}|Scanner|main
-m|T{
- object of MxN
-T}|MxN|main
-i|T{
- row iterator
-T}|int|main
-j|T{
- col iterator
-T}|int|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp

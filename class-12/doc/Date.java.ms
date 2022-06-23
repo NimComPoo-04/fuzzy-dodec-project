@@ -339,6 +339,16 @@ public class Date
 .br
 	// manages main input and output
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Date_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -369,7 +379,7 @@ public class Date
 .br
 		// date array
 .br
-		int[] date = parse_input(str_date);
+		int[] date = Date.parse_input(str_date);
 .br
 		
 .br
@@ -476,24 +486,24 @@ T}|String[]|parse_input
 di|T{
  initialize an int array
 T}|int[]|parse_input
-sc|T{
- input system
-T}|Scanner|main
-str_date|T{
- System.out.print("date: ");
-T}|String|main
-jan_1st|T{
- day of first january
-T}|String|main
-date|T{
- date array
-T}|int[]|main
-d|T{
- gnenrate object
-T}|Date|main
-new_day|T{
- get generated day
-T}|String|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp

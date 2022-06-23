@@ -374,6 +374,16 @@ public class ToHex extends BinHex
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class ToHex_main
+.br
+{
+.br
 	public static void main(String arg[])
 .br
 	{
@@ -455,12 +465,12 @@ T}|String|display
 hex_map|T{
  a hex character mapper
 T}|char[]|display
-sc|T{
- input handler
-T}|Scanner|main
-th|T{
- to hex object
-T}|ToHex|main
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp

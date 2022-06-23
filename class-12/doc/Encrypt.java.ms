@@ -454,6 +454,16 @@ public class Encrypt extends Sentence
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Encrypt_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -555,15 +565,15 @@ T}|int|else
 x|T{
  duplicate letters
 T}|char|if
-sc|T{
- input handler
-T}|Scanner|main
-line|T{
- line input
-T}|String|main
-e|T{
- encrypt object creation
-T}|Encrypt|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp

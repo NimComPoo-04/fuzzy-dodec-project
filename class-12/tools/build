@@ -2,6 +2,8 @@
 
 # Generate documentation pdf
 
+./tools/genmain.py src src/main
+
 files=`ls src`
 
 sorted_files=`for wrd in $files

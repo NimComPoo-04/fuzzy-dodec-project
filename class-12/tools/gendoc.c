@@ -325,11 +325,32 @@ doc_t documentize(element_t *stream, size_t length)
 	return dx;
 }
 
-void code_prnt(str_t s)
+void code_prnt(str_t s, int tfx)
 {
 	if(s.value == NULL) return;
+
+	if(tfx) 
+	{
+		size_t start = 0;
+		start = strstr(s.value, "public static void main") - s.value;
+
+		size_t g = strstr(s.value + start, "{") - s.value - start;
+		int l = 1;
+
+		g = g + 1;
+		while(l)
+		{
+			if(s.value[start + g] == '{') l++;
+			else if(s.value[start + g] == '}') l--;
+			g++;
+		}
+
+		memset(s.value+start, 0, g);
+	}
+
 	for(size_t i = 0; i < s.length; i++)
 	{
+		if(s.value[i] == 0) continue;
 		// we don't need too much comment now do we lol
 		if(strncmp(s.value+i, "/*", 2) == 0)
 		{
@@ -384,7 +405,7 @@ void docs_prnt(str_t s)
 }
 
 // prints the document as groff lol
-void document_prnt(doc_t *d, str_t source_code)
+void document_prnt(doc_t *d, str_t source_code, str_t main_source_code)
 {
 	printf("\n\n.nr PS 12500\n");
 	docs_prnt(d->docs);
@@ -444,7 +465,9 @@ void document_prnt(doc_t *d, str_t source_code)
 	printf(".LP\n");
 	printf(".SM\n");
 	printf(".fam C\n");
-	code_prnt(source_code);
+	code_prnt(source_code, 1);
+	//printf("\n.br\n");
+	code_prnt(main_source_code, 0);
 	printf("\n.fam\n");
 	printf(".NL\n");
 
@@ -489,7 +512,20 @@ int main(int argc, char **argv)
 {
 	if(argc < 2) return 1;
 
+	char buffer[1024] = {0};
+
+	char *xlkj = strrchr(argv[1], '/');
+
+	strncpy(buffer, argv[1], xlkj - argv[1]);
+	strcat(buffer, "/main");
+	strcat(buffer, xlkj);
+
+	strcpy(strstr(buffer, ".java"), "_main.java");
+
+	fprintf(stderr, "%s\n", buffer);
+
 	str_t data = str_read_file(argv[1]);
+	str_t main_data = str_read_file(buffer);
 	if(data.value == NULL) return 2;
 
 	size_t stream_size = 0;
@@ -498,5 +534,5 @@ int main(int argc, char **argv)
 	// elements_prnt(stream, stream_size);
 
 	doc_t d = documentize(stream, stream_size);
-	document_prnt(&d, data);
+	document_prnt(&d, data, main_data);
 }

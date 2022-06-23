@@ -16,7 +16,7 @@ public class Date_main
 
 		// parsing the input into usable format
 		// date array
-		int[] date = parse_input(str_date);
+		int[] date = Date.parse_input(str_date);
 		
 		// Handles apparent error condition
 		if(date == null)

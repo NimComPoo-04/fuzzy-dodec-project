@@ -335,6 +335,16 @@ public class FiboPrime
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class FiboPrime_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -395,9 +405,9 @@ T}|int|displayFiboPrimes
 fb|T{
  fibo accumulator
 T}|int|displayFiboPrimes
-sc|T{
- Input handler
-T}|Scanner|main
+|T{
+
+T}||
 .TE
 
 .bp

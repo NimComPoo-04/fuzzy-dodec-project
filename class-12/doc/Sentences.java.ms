@@ -367,6 +367,16 @@ public class Sentences
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Sentences_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -468,15 +478,15 @@ T}|String[]|getCommonWord
 x|T{
  generated common words formated output
 T}|String|getCommonWord
-sc|T{
- input handler
-T}|Scanner|main
-se|T{
- setnece object
-T}|Sentences|main
-x|T{
- composited output
-T}|String|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp

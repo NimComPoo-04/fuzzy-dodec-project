@@ -363,6 +363,16 @@ public class Matrix
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class Matrix_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -371,7 +381,7 @@ public class Matrix
 .br
 		// Matrix object
 .br
-		Matrix m = readMat();
+		Matrix m = Matrix.readMat();
 .br
 
 .br
@@ -448,9 +458,9 @@ T}|int|readMat
 m|T{
  matrix object for matrix operations
 T}|Matrix|readMat
-m|T{
- Matrix object
-T}|Matrix|main
+|T{
+
+T}||
 .TE
 
 .bp

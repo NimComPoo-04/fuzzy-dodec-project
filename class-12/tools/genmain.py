@@ -45,13 +45,17 @@ def main():
     if len(sys.argv) <= 1:
         print('Enter name of directory')
         return
+    
+    ps = ''
+    if len(sys.argv) >= 3:
+        ps = sys.argv[2]
 
     files = os.listdir(sys.argv[1])
 
     for x in files:
         i = x.find('java')
         if i != -1:
-            g = open(sys.argv[1]+'/'+x[0:i-1]+'_main.java', 'w')
+            g = open(ps+'/'+x[0:i-1]+'_main.java', 'w')
             g.write(genfile(sys.argv[1]+'/'+x))
             g.close()
 

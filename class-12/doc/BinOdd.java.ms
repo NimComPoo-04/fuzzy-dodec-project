@@ -126,6 +126,16 @@ public class BinOdd
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class BinOdd_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -160,7 +170,7 @@ public class BinOdd
 .br
 		{
 .br
-			if(isBinOdd(lower_limit))
+			if(BinOdd.isBinOdd(lower_limit))
 .br
 				System.out.println(lower_limit);
 .br
@@ -194,15 +204,15 @@ expand center tab(|);
 - - - - -
 |l |l s| l |l|.
 Name|Function|Type|Scope
-sc|T{
- input handler
-T}|Scanner|main
-upper_limit|T{
- upper limit
-T}|int|main
-lower_limit|T{
- lower limit
-T}|int|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp

@@ -299,6 +299,16 @@ public class SumDigit
 .br
 
 .br
+	
+.br
+}
+.br
+import java.util.Scanner;
+.br
+public class SumDigit_main
+.br
+{
+.br
 	public static void main(String args[])
 .br
 	{
@@ -386,15 +396,15 @@ T}|int|digitSum
 digits|T{
  return the added digits
 T}|int|genNum
-sc|T{
- input handler
-T}|Scanner|main
-s|T{
- call genNum and display the value
-T}|SumDigit|main
-digits|T{
-stores the digits
-T}|int|main
+|T{
+
+T}||
+|T{
+
+T}||
+|T{
+
+T}||
 .TE
 
 .bp
