@@ -130,6 +130,8 @@ public class BinOdd
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class BinOdd_main
@@ -143,6 +145,10 @@ public class BinOdd_main
 		// input handler
 .br
 		Scanner sc = new Scanner(System.in);
+.br
+		
+.br
+		System.out.println("Enter upper_limit and lower_limit: ");
 .br
 
 .br
@@ -192,7 +198,7 @@ public class BinOdd_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -204,15 +210,15 @@ expand center tab(|);
 - - - - -
 |l |l s| l |l|.
 Name|Function|Type|Scope
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+upper_limit|T{
+ upper limit
+T}|int|main
+lower_limit|T{
+ lower limit
+T}|int|main
 .TE
 
 .bp

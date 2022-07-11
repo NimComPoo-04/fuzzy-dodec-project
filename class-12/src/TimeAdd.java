@@ -66,17 +66,23 @@ public class TimeAdd
 		// add two time objects return final value
 		// generate a new timeadd object
 		// add and store the value of this and t
+
 		TimeAdd x = new TimeAdd();
-		x.hr = t.hr + this.hr;
-		x.min = t.min + this.min;
+
 		x.sec = t.sec + this.sec;
+		x.min = t.min + this.min + x.sec/60;
+		x.hr = t.hr + this.hr + x.min/60;
+
+		x.sec = x.sec % 60;
+		x.min = x.min % 60;
+
 		return x;
 	}
 
 	void display()
 	{
 		// display time in hour, mins and seconds
-		System.out.println("Hr: "+this.hr+"Min:"+this.min+" Sec: "+this.sec);
+		System.out.println("Hr: "+this.hr+" Min:"+this.min+" Sec: "+this.sec);
 	}
 
 	public static void main(String args[])

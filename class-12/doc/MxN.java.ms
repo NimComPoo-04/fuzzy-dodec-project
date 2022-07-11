@@ -217,7 +217,7 @@ public class MxN
 .br
 		{
 .br
-			j = i;
+			j = 0;
 .br
 			while(j < arr.length-1)
 .br
@@ -391,7 +391,7 @@ public class MxN
 .br
 			{
 .br
-				System.out.print(j+" ");
+				System.out.print(this.A[i][j]+" ");
 .br
 				j++;
 .br
@@ -410,6 +410,8 @@ public class MxN
 	
 .br
 }
+.br
+
 .br
 import java.util.Scanner;
 .br
@@ -463,11 +465,15 @@ public class MxN_main
 .br
 		}
 .br
+		System.out.println();
+.br
 
 .br
 		// display original matrix
 .br
 		m.display();
+.br
+		System.out.println();
 .br
 
 .br
@@ -495,7 +501,7 @@ public class MxN_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -546,18 +552,18 @@ T}|int|display
 j|T{
  index of the cols
 T}|int|display
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+m|T{
+ object of MxN
+T}|MxN|main
+i|T{
+ row iterator
+T}|int|main
+j|T{
+ col iterator
+T}|int|main
 .TE
 
 .bp

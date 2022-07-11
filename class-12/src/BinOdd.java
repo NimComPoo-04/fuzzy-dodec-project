@@ -33,6 +33,8 @@ public class BinOdd
 	{
 		// input handler
 		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter upper_limit and lower_limit: ");
 
 		// accpet upper limit
 		// upper limit

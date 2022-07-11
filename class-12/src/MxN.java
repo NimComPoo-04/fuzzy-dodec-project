@@ -51,7 +51,7 @@ public class MxN
 		// if it is then swap the elements
 		while(i < arr.length)
 		{
-			j = i;
+			j = 0;
 			while(j < arr.length-1)
 			{
 				if(arr[j+1] > arr[j])
@@ -138,7 +138,7 @@ public class MxN
 			j = 0;
 			while(j < N)
 			{
-				System.out.print(j+" ");
+				System.out.print(this.A[i][j]+" ");
 				j++;
 			}
 			System.out.println();
@@ -169,9 +169,11 @@ public class MxN
 				m.A[i][j] = sc.nextInt();
 			}
 		}
+		System.out.println();
 
 		// display original matrix
 		m.display();
+		System.out.println();
 
 		// sort the original in the fation metioned matrix
 		m.sort();

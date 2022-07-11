@@ -329,6 +329,8 @@ void code_prnt(str_t s, int tfx)
 {
 	if(s.value == NULL) return;
 
+	(void)tfx;
+	/*
 	if(tfx) 
 	{
 		size_t start = 0;
@@ -347,6 +349,9 @@ void code_prnt(str_t s, int tfx)
 
 		memset(s.value+start, 0, g);
 	}
+	*/
+
+	size_t start = strstr(s.value, "public static void main") - s.value;
 
 	for(size_t i = 0; i < s.length; i++)
 	{
@@ -357,6 +362,22 @@ void code_prnt(str_t s, int tfx)
 			while(strncmp(s.value+i, "*/", 2) != 0)
 				i++;
 			i += 2;
+		}
+
+		if(tfx && i == start)
+		{
+			size_t g = strstr(s.value + start, "{") - s.value;
+			int l = 1;
+
+			g = g + 1;
+			while(l)
+			{
+				if(s.value[g] == '{') l++;
+				else if(s.value[g] == '}') l--;
+				g++;
+			}
+
+			i = g;
 		}
 
 		putc(s.value[i], stdout);
@@ -466,7 +487,7 @@ void document_prnt(doc_t *d, str_t source_code, str_t main_source_code)
 	printf(".SM\n");
 	printf(".fam C\n");
 	code_prnt(source_code, 1);
-	//printf("\n.br\n");
+	printf("\n.br\n");
 	code_prnt(main_source_code, 0);
 	printf("\n.fam\n");
 	printf(".NL\n");
@@ -478,7 +499,7 @@ void document_prnt(doc_t *d, str_t source_code, str_t main_source_code)
 	printf(".LG\n");
 	printf(".LG\n");
 	printf(".B\n");
-	printf("Varible Listing\n");
+	printf("Variable Listing\n");
 	printf(".NL\n");
 	printf(".DE\n");
 
@@ -525,14 +546,16 @@ int main(int argc, char **argv)
 	fprintf(stderr, "%s\n", buffer);
 
 	str_t data = str_read_file(argv[1]);
+
 	str_t main_data = str_read_file(buffer);
 	if(data.value == NULL) return 2;
 
 	size_t stream_size = 0;
 	element_t *stream = create_stream(data, &stream_size);
 
-	// elements_prnt(stream, stream_size);
-
 	doc_t d = documentize(stream, stream_size);
+
+	//elements_prnt(stream, stream_size);
+
 	document_prnt(&d, data, main_data);
 }

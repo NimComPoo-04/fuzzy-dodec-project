@@ -210,7 +210,13 @@ class BinHex
 .br
 		// output number
 .br
-		String output = "";
+		int output = 0;
+.br
+
+.br
+		// number that would deal with this
+.br
+		int x = 1;
 .br
 
 .br
@@ -224,9 +230,11 @@ class BinHex
 .br
 		{
 .br
-			output = n%10 + output;
+			output = n%10 * x + output;
 .br
 			n /= 10;
+.br
+			x *= 2;
 .br
 		}
 .br
@@ -378,6 +386,8 @@ public class ToHex extends BinHex
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class ToHex_main
@@ -426,7 +436,7 @@ public class ToHex_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -446,7 +456,10 @@ n|T{
 T}|int|display
 output|T{
  output number
-T}|String|display
+T}|int|display
+x|T{
+ number that would deal with this
+T}|int|display
 hex|T{
  to store hexadecimal number
 T}|int|BinHex
@@ -465,12 +478,12 @@ T}|String|display
 hex_map|T{
  a hex character mapper
 T}|char[]|display
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+th|T{
+ to hex object
+T}|ToHex|main
 .TE
 
 .bp

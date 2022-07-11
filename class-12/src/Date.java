@@ -118,10 +118,10 @@ public class Date
 		Scanner sc = new Scanner(System.in);
 
 		// accept input properly
-		// System.out.print("date: ");
+		System.out.print("date: ");
 		String str_date = sc.next();
 
-		// System.out.print("day on 1st January: ");
+		System.out.print("day on 1st January: ");
 		// day of first january
 		String jan_1st = sc.next();
 

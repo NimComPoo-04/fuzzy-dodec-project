@@ -371,6 +371,8 @@ public class Sentences
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Sentences_main
@@ -439,7 +441,7 @@ public class Sentences_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -478,15 +480,15 @@ T}|String[]|getCommonWord
 x|T{
  generated common words formated output
 T}|String|getCommonWord
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+se|T{
+ setnece object
+T}|Sentences|main
+x|T{
+ composited output
+T}|String|main
 .TE
 
 .bp

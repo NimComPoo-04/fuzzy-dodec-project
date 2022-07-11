@@ -225,7 +225,7 @@ class Number
 .br
 		// print the value of n
 .br
-		System.out.println(this.n);
+		System.out.println("Value of N: " + this.n);
 .br
 	}
 .br
@@ -293,6 +293,8 @@ public class Series extends Number
 .br
 			this.prod *= Math.pow(x, i)/factorial(i);
 .br
+			i++;
+.br
 		}
 .br
 	}
@@ -311,7 +313,7 @@ public class Series extends Number
 .br
 		// print the product of the value
 .br
-		System.out.println(this.prod);
+		System.out.println("Value of Product: " + this.prod);
 .br
 	}
 .br
@@ -320,6 +322,8 @@ public class Series extends Number
 	
 .br
 }
+.br
+
 .br
 import java.util.Scanner;
 .br
@@ -340,6 +344,8 @@ public class Series_main
 		// generates the series from user input
 .br
 		// series object
+.br
+		System.out.println("Enter n then x: ");
 .br
 		Series s = new Series(sc.nextInt(), sc.nextInt());
 .br
@@ -369,7 +375,7 @@ public class Series_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -393,12 +399,12 @@ T}|int|Number
 i|T{
  create an iterator
 T}|int|calProd
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+s|T{
+ series object
+T}|Series|main
 .TE
 
 .bp

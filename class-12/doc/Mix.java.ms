@@ -308,6 +308,8 @@ public class Mix
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Mix_main
@@ -368,7 +370,7 @@ public class Mix_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -389,15 +391,15 @@ T}|int|Mix
 sc|T{
  input handler
 T}|Scanner|feedword
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+P|T{
+ P in the mix_word
+T}|Mix|main
+Q|T{
+ Q in the mix_word
+T}|Mix|main
+m|T{
+ the mix object for computation
+T}|Mix|main
 .TE
 
 .bp

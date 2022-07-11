@@ -367,6 +367,8 @@ public class Matrix
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Matrix_main
@@ -380,6 +382,8 @@ public class Matrix_main
 		// accpting input from user
 .br
 		// Matrix object
+.br
+		System.out.println("Enter Matrix: ");
 .br
 		Matrix m = Matrix.readMat();
 .br
@@ -425,7 +429,7 @@ public class Matrix_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -458,9 +462,9 @@ T}|int|readMat
 m|T{
  matrix object for matrix operations
 T}|Matrix|readMat
-|T{
-
-T}||
+m|T{
+ Matrix object
+T}|Matrix|main
 .TE
 
 .bp

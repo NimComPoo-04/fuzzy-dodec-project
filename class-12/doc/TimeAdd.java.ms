@@ -219,13 +219,25 @@ public class TimeAdd
 .br
 		// add and store the value of this and t
 .br
+
+.br
 		TimeAdd x = new TimeAdd();
 .br
-		x.hr = t.hr + this.hr;
-.br
-		x.min = t.min + this.min;
+
 .br
 		x.sec = t.sec + this.sec;
+.br
+		x.min = t.min + this.min + x.sec/60;
+.br
+		x.hr = t.hr + this.hr + x.min/60;
+.br
+
+.br
+		x.sec = x.sec % 60;
+.br
+		x.min = x.min % 60;
+.br
+
 .br
 		return x;
 .br
@@ -239,7 +251,7 @@ public class TimeAdd
 .br
 		// display time in hour, mins and seconds
 .br
-		System.out.println("Hr: "+this.hr+"Min:"+this.min+" Sec: "+this.sec);
+		System.out.println("Hr: "+this.hr+" Min:"+this.min+" Sec: "+this.sec);
 .br
 	}
 .br
@@ -248,6 +260,8 @@ public class TimeAdd
 	
 .br
 }
+.br
+
 .br
 import java.util.Scanner;
 .br
@@ -303,7 +317,7 @@ public class TimeAdd_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -330,9 +344,9 @@ T}|Scanner|accept
 x|T{
  add and store the value of this and t
 T}|TimeAdd|timeAdd
-|T{
-
-T}||
+t|T{
+ Timeadds
+T}|TimeAdd[]|main
 .TE
 
 .bp

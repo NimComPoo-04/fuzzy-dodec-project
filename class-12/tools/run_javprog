@@ -1,0 +1,22 @@
+#!/bin/sh
+
+main()
+{
+	for f in $FGG
+	do
+		echo "FILE: $f"
+		for x in 1 2 3
+		do
+			xterm -fg black -bg white -sl 1024 -e "java -cp class $f; printf '\033[10i'; sleep 5"
+			# -fa "xft:IBMPlexMono:style=Bold:pixelsize=30"
+		done
+	done
+}
+
+FGG= $(echo find class -type f | )
+echo $FGG
+
+for F in $FGG
+do
+	echo "FILE: $F"
+done

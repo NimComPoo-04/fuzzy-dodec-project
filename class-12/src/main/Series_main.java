@@ -8,6 +8,7 @@ public class Series_main
 
 		// generates the series from user input
 		// series object
+		System.out.println("Enter n then x: ");
 		Series s = new Series(sc.nextInt(), sc.nextInt());
 
 		// calculate the product

@@ -207,6 +207,8 @@ public class StringModify
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class StringModify_main
@@ -293,7 +295,7 @@ public class StringModify_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -308,21 +310,21 @@ Name|Function|Type|Scope
 st|T{
  original string
 T}|String|StringModify
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ Input Handler
+T}|Scanner|main
+opt|T{
+ option of menuentry
+T}|int|main
+s|T{
+ generate an object of StringModify using that sentence
+T}|StringModify|main
+w|T{
+ the new string that needs to be attached or removed
+T}|String|main
+pos|T{
+ position of the attachment or removal
+T}|int|main
 .TE
 
 .bp

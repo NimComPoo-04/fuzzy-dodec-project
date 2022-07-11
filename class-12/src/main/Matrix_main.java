@@ -5,6 +5,7 @@ public class Matrix_main
 	{
 		// accpting input from user
 		// Matrix object
+		System.out.println("Enter Matrix: ");
 		Matrix m = Matrix.readMat();
 
 		// displaying original matrix

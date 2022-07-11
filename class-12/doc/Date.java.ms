@@ -107,19 +107,15 @@ Step 3:  End
 .br
 Step 1:  Start
 .br
-Step 2:  accept input properly
+Step 2:  parsing the input into usable format
 .br
-Step 3:  System.out.print("day on 1st January: ");
+Step 3:  Handles apparent error condition
 .br
-Step 4:  parsing the input into usable format
+Step 4:  Handles apparent error condition
 .br
-Step 5:  Handles apparent error condition
+Step 5:  outputs the required day
 .br
-Step 6:  Handles apparent error condition
-.br
-Step 7:  outputs the required day
-.br
-Step 8:  End
+Step 6:  End
 
 .bp
 .SH
@@ -343,6 +339,8 @@ public class Date
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Date_main
@@ -361,13 +359,13 @@ public class Date_main
 .br
 		// accept input properly
 .br
-		// System.out.print("date: ");
+		System.out.print("date: ");
 .br
 		String str_date = sc.next();
 .br
 
 .br
-		// System.out.print("day on 1st January: ");
+		System.out.print("day on 1st January: ");
 .br
 		// day of first january
 .br
@@ -441,7 +439,7 @@ public class Date_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -486,24 +484,24 @@ T}|String[]|parse_input
 di|T{
  initialize an int array
 T}|int[]|parse_input
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input system
+T}|Scanner|main
+str_date|T{
+ accept input properly
+T}|String|main
+jan_1st|T{
+ day of first january
+T}|String|main
+date|T{
+ date array
+T}|int[]|main
+d|T{
+ gnenrate object
+T}|Date|main
+new_day|T{
+ get generated day
+T}|String|main
 .TE
 
 .bp

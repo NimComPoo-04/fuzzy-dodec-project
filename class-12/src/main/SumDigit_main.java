@@ -9,6 +9,7 @@ public class SumDigit_main
 		// accept input from the user
 		// use the input to initialize the object
 		// call genNum and display the value
+		System.out.print("M and N = ");
 		SumDigit s = new SumDigit(sc.nextInt(), sc.nextInt());
 
 		//stores the digits

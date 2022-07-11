@@ -303,6 +303,8 @@ public class SumDigit
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class SumDigit_main
@@ -324,6 +326,8 @@ public class SumDigit_main
 		// use the input to initialize the object
 .br
 		// call genNum and display the value
+.br
+		System.out.print("M and N = ");
 .br
 		SumDigit s = new SumDigit(sc.nextInt(), sc.nextInt());
 .br
@@ -369,7 +373,7 @@ public class SumDigit_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -396,15 +400,15 @@ T}|int|digitSum
 digits|T{
  return the added digits
 T}|int|genNum
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+s|T{
+ call genNum and display the value
+T}|SumDigit|main
+digits|T{
+stores the digits
+T}|int|main
 .TE
 
 .bp

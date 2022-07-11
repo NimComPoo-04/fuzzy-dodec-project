@@ -60,15 +60,19 @@ class BinHex
 		int n = this.n;
 
 		// output number
-		String output = "";
+		int output = 0;
+
+		// number that would deal with this
+		int x = 1;
 
 		// loop through n digits
 		// when n is zero exit
 		// print each digit of number
 		while(n != 0)
 		{
-			output = n%10 + output;
+			output = n%10 * x + output;
 			n /= 10;
+			x *= 2;
 		}
 
 		// display a new line at the end for pretty print

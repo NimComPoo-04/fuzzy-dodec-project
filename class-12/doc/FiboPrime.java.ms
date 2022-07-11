@@ -339,6 +339,8 @@ public class FiboPrime
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class FiboPrime_main
@@ -375,7 +377,7 @@ public class FiboPrime_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -405,9 +407,9 @@ T}|int|displayFiboPrimes
 fb|T{
  fibo accumulator
 T}|int|displayFiboPrimes
-|T{
-
-T}||
+sc|T{
+ Input handler
+T}|Scanner|main
 .TE
 
 .bp

@@ -458,6 +458,8 @@ public class Encrypt extends Sentence
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Encrypt_main
@@ -520,7 +522,7 @@ public class Encrypt_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -565,15 +567,15 @@ T}|int|else
 x|T{
  duplicate letters
 T}|char|if
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+line|T{
+ line input
+T}|String|main
+e|T{
+ encrypt object creation
+T}|Encrypt|main
 .TE
 
 .bp

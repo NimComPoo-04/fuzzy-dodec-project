@@ -73,7 +73,7 @@ class Number
 	void display()
 	{
 		// print the value of n
-		System.out.println(this.n);
+		System.out.println("Value of N: " + this.n);
 	}
 }
 
@@ -107,6 +107,7 @@ public class Series extends Number
 		while(i <= n)
 		{
 			this.prod *= Math.pow(x, i)/factorial(i);
+			i++;
 		}
 	}
 
@@ -116,7 +117,7 @@ public class Series extends Number
 		super.display();
 		
 		// print the product of the value
-		System.out.println(this.prod);
+		System.out.println("Value of Product: " + this.prod);
 	}
 
 	public static void main(String args[])
@@ -126,6 +127,7 @@ public class Series extends Number
 
 		// generates the series from user input
 		// series object
+		System.out.println("Enter n then x: ");
 		Series s = new Series(sc.nextInt(), sc.nextInt());
 
 		// calculate the product

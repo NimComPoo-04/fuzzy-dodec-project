@@ -18,4 +18,4 @@ done
 
 cat ./doc/title.ms `for wrd in $sorted_files; do echo ./doc/$wrd.ms; done` > ./doc/foo.ms
 
-groff -t -Tpdf -dpaper=a4 -P-pa4 -m ms ./doc/foo.ms > foo.pdf
+groff -t -U -Tpdf -dpaper=a4 -P-pa4 -m ms ./doc/foo.ms > foo.pdf

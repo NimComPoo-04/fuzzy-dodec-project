@@ -24,9 +24,11 @@ public class MxN_main
 				m.A[i][j] = sc.nextInt();
 			}
 		}
+		System.out.println();
 
 		// display original matrix
 		m.display();
+		System.out.println();
 
 		// sort the original in the fation metioned matrix
 		m.sort();

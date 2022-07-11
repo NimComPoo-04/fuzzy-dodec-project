@@ -18,6 +18,8 @@ Assignment 1
 Assignment 2
 .XA 14
 Assignment 3
+.XA 19
+Assignment 4
 .XA 25
 Assignment 5
 .XA 30
@@ -26,13 +28,15 @@ Assignment 6
 Assignment 7
 .XA 42
 Assignment 8
-.XA 47
+.XA 48
 Assignment 9
-.XA 60
+.XA 54
+Assignment 10
+.XA 61
 Assignment 11
-.XA 67
+.XA 68
 Assignment 12
-.XA 74
+.XA 75
 Assignment 13
 .XE
 
@@ -148,19 +152,15 @@ Step 3:  End
 .br
 Step 1:  Start
 .br
-Step 2:  accept input properly
+Step 2:  parsing the input into usable format
 .br
-Step 3:  System.out.print("day on 1st January: ");
+Step 3:  Handles apparent error condition
 .br
-Step 4:  parsing the input into usable format
+Step 4:  Handles apparent error condition
 .br
-Step 5:  Handles apparent error condition
+Step 5:  outputs the required day
 .br
-Step 6:  Handles apparent error condition
-.br
-Step 7:  outputs the required day
-.br
-Step 8:  End
+Step 6:  End
 
 .bp
 .SH
@@ -384,6 +384,8 @@ public class Date
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Date_main
@@ -402,13 +404,13 @@ public class Date_main
 .br
 		// accept input properly
 .br
-		// System.out.print("date: ");
+		System.out.print("date: ");
 .br
 		String str_date = sc.next();
 .br
 
 .br
-		// System.out.print("day on 1st January: ");
+		System.out.print("day on 1st January: ");
 .br
 		// day of first january
 .br
@@ -482,7 +484,7 @@ public class Date_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -527,24 +529,24 @@ T}|String[]|parse_input
 di|T{
  initialize an int array
 T}|int[]|parse_input
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input system
+T}|Scanner|main
+str_date|T{
+ accept input properly
+T}|String|main
+jan_1st|T{
+ day of first january
+T}|String|main
+date|T{
+ date array
+T}|int[]|main
+d|T{
+ gnenrate object
+T}|Date|main
+new_day|T{
+ get generated day
+T}|String|main
 .TE
 
 .bp
@@ -769,13 +771,25 @@ public class TimeAdd
 .br
 		// add and store the value of this and t
 .br
+
+.br
 		TimeAdd x = new TimeAdd();
 .br
-		x.hr = t.hr + this.hr;
-.br
-		x.min = t.min + this.min;
+
 .br
 		x.sec = t.sec + this.sec;
+.br
+		x.min = t.min + this.min + x.sec/60;
+.br
+		x.hr = t.hr + this.hr + x.min/60;
+.br
+
+.br
+		x.sec = x.sec % 60;
+.br
+		x.min = x.min % 60;
+.br
+
 .br
 		return x;
 .br
@@ -789,7 +803,7 @@ public class TimeAdd
 .br
 		// display time in hour, mins and seconds
 .br
-		System.out.println("Hr: "+this.hr+"Min:"+this.min+" Sec: "+this.sec);
+		System.out.println("Hr: "+this.hr+" Min:"+this.min+" Sec: "+this.sec);
 .br
 	}
 .br
@@ -798,6 +812,8 @@ public class TimeAdd
 	
 .br
 }
+.br
+
 .br
 import java.util.Scanner;
 .br
@@ -853,7 +869,7 @@ public class TimeAdd_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -880,9 +896,9 @@ T}|Scanner|accept
 x|T{
  add and store the value of this and t
 T}|TimeAdd|timeAdd
-|T{
-
-T}||
+t|T{
+ Timeadds
+T}|TimeAdd[]|main
 .TE
 
 .bp
@@ -1018,6 +1034,8 @@ public class BinOdd
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class BinOdd_main
@@ -1031,6 +1049,10 @@ public class BinOdd_main
 		// input handler
 .br
 		Scanner sc = new Scanner(System.in);
+.br
+		
+.br
+		System.out.println("Enter upper_limit and lower_limit: ");
 .br
 
 .br
@@ -1080,7 +1102,7 @@ public class BinOdd_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -1092,15 +1114,15 @@ expand center tab(|);
 - - - - -
 |l |l s| l |l|.
 Name|Function|Type|Scope
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+upper_limit|T{
+ upper limit
+T}|int|main
+lower_limit|T{
+ lower limit
+T}|int|main
 .TE
 
 .bp
@@ -1473,6 +1495,8 @@ public class Matrix
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Matrix_main
@@ -1486,6 +1510,8 @@ public class Matrix_main
 		// accpting input from user
 .br
 		// Matrix object
+.br
+		System.out.println("Enter Matrix: ");
 .br
 		Matrix m = Matrix.readMat();
 .br
@@ -1531,7 +1557,7 @@ public class Matrix_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -1564,9 +1590,9 @@ T}|int|readMat
 m|T{
  matrix object for matrix operations
 T}|Matrix|readMat
-|T{
-
-T}||
+m|T{
+ Matrix object
+T}|Matrix|main
 .TE
 
 .bp
@@ -1779,6 +1805,8 @@ public class StringModify
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class StringModify_main
@@ -1865,7 +1893,7 @@ public class StringModify_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -1880,21 +1908,21 @@ Name|Function|Type|Scope
 st|T{
  original string
 T}|String|StringModify
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ Input Handler
+T}|Scanner|main
+opt|T{
+ option of menuentry
+T}|int|main
+s|T{
+ generate an object of StringModify using that sentence
+T}|StringModify|main
+w|T{
+ the new string that needs to be attached or removed
+T}|String|main
+pos|T{
+ position of the attachment or removal
+T}|int|main
 .TE
 
 .bp
@@ -2203,6 +2231,8 @@ public class SumDigit
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class SumDigit_main
@@ -2224,6 +2254,8 @@ public class SumDigit_main
 		// use the input to initialize the object
 .br
 		// call genNum and display the value
+.br
+		System.out.print("M and N = ");
 .br
 		SumDigit s = new SumDigit(sc.nextInt(), sc.nextInt());
 .br
@@ -2269,7 +2301,7 @@ public class SumDigit_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -2296,15 +2328,15 @@ T}|int|digitSum
 digits|T{
  return the added digits
 T}|int|genNum
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+s|T{
+ call genNum and display the value
+T}|SumDigit|main
+digits|T{
+stores the digits
+T}|int|main
 .TE
 
 .bp
@@ -2681,6 +2713,8 @@ public class Sentences
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Sentences_main
@@ -2749,7 +2783,7 @@ public class Sentences_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -2788,15 +2822,15 @@ T}|String[]|getCommonWord
 x|T{
  generated common words formated output
 T}|String|getCommonWord
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+se|T{
+ setnece object
+T}|Sentences|main
+x|T{
+ composited output
+T}|String|main
 .TE
 
 .bp
@@ -3110,6 +3144,8 @@ public class Mix
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Mix_main
@@ -3170,7 +3206,7 @@ public class Mix_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -3191,15 +3227,15 @@ T}|int|Mix
 sc|T{
  input handler
 T}|Scanner|feedword
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+P|T{
+ P in the mix_word
+T}|Mix|main
+Q|T{
+ Q in the mix_word
+T}|Mix|main
+m|T{
+ the mix object for computation
+T}|Mix|main
 .TE
 
 .bp
@@ -3544,6 +3580,8 @@ public class FiboPrime
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class FiboPrime_main
@@ -3580,7 +3618,7 @@ public class FiboPrime_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -3610,9 +3648,9 @@ T}|int|displayFiboPrimes
 fb|T{
  fibo accumulator
 T}|int|displayFiboPrimes
-|T{
-
-T}||
+sc|T{
+ Input handler
+T}|Scanner|main
 .TE
 
 .bp
@@ -3835,7 +3873,7 @@ public class MxN
 .br
 		{
 .br
-			j = i;
+			j = 0;
 .br
 			while(j < arr.length-1)
 .br
@@ -4009,7 +4047,7 @@ public class MxN
 .br
 			{
 .br
-				System.out.print(j+" ");
+				System.out.print(this.A[i][j]+" ");
 .br
 				j++;
 .br
@@ -4028,6 +4066,8 @@ public class MxN
 	
 .br
 }
+.br
+
 .br
 import java.util.Scanner;
 .br
@@ -4081,11 +4121,15 @@ public class MxN_main
 .br
 		}
 .br
+		System.out.println();
+.br
 
 .br
 		// display original matrix
 .br
 		m.display();
+.br
+		System.out.println();
 .br
 
 .br
@@ -4113,7 +4157,7 @@ public class MxN_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -4164,18 +4208,18 @@ T}|int|display
 j|T{
  index of the cols
 T}|int|display
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+m|T{
+ object of MxN
+T}|MxN|main
+i|T{
+ row iterator
+T}|int|main
+j|T{
+ col iterator
+T}|int|main
 .TE
 
 .bp
@@ -4391,7 +4435,13 @@ class BinHex
 .br
 		// output number
 .br
-		String output = "";
+		int output = 0;
+.br
+
+.br
+		// number that would deal with this
+.br
+		int x = 1;
 .br
 
 .br
@@ -4405,9 +4455,11 @@ class BinHex
 .br
 		{
 .br
-			output = n%10 + output;
+			output = n%10 * x + output;
 .br
 			n /= 10;
+.br
+			x *= 2;
 .br
 		}
 .br
@@ -4559,6 +4611,8 @@ public class ToHex extends BinHex
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class ToHex_main
@@ -4607,7 +4661,7 @@ public class ToHex_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -4627,7 +4681,10 @@ n|T{
 T}|int|display
 output|T{
  output number
-T}|String|display
+T}|int|display
+x|T{
+ number that would deal with this
+T}|int|display
 hex|T{
  to store hexadecimal number
 T}|int|BinHex
@@ -4646,12 +4703,12 @@ T}|String|display
 hex_map|T{
  a hex character mapper
 T}|char[]|display
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+th|T{
+ to hex object
+T}|ToHex|main
 .TE
 
 .bp
@@ -5115,6 +5172,8 @@ public class Encrypt extends Sentence
 .br
 }
 .br
+
+.br
 import java.util.Scanner;
 .br
 public class Encrypt_main
@@ -5177,7 +5236,7 @@ public class Encrypt_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -5222,15 +5281,15 @@ T}|int|else
 x|T{
  duplicate letters
 T}|char|if
-|T{
-
-T}||
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+line|T{
+ line input
+T}|String|main
+e|T{
+ encrypt object creation
+T}|Encrypt|main
 .TE
 
 .bp
@@ -5461,7 +5520,7 @@ class Number
 .br
 		// print the value of n
 .br
-		System.out.println(this.n);
+		System.out.println("Value of N: " + this.n);
 .br
 	}
 .br
@@ -5529,6 +5588,8 @@ public class Series extends Number
 .br
 			this.prod *= Math.pow(x, i)/factorial(i);
 .br
+			i++;
+.br
 		}
 .br
 	}
@@ -5547,7 +5608,7 @@ public class Series extends Number
 .br
 		// print the product of the value
 .br
-		System.out.println(this.prod);
+		System.out.println("Value of Product: " + this.prod);
 .br
 	}
 .br
@@ -5556,6 +5617,8 @@ public class Series extends Number
 	
 .br
 }
+.br
+
 .br
 import java.util.Scanner;
 .br
@@ -5576,6 +5639,8 @@ public class Series_main
 		// generates the series from user input
 .br
 		// series object
+.br
+		System.out.println("Enter n then x: ");
 .br
 		Series s = new Series(sc.nextInt(), sc.nextInt());
 .br
@@ -5605,7 +5670,7 @@ public class Series_main
 .LG
 .LG
 .B
-Varible Listing
+Variable Listing
 .NL
 .DE
 
@@ -5629,12 +5694,12 @@ T}|int|Number
 i|T{
  create an iterator
 T}|int|calProd
-|T{
-
-T}||
-|T{
-
-T}||
+sc|T{
+ input handler
+T}|Scanner|main
+s|T{
+ series object
+T}|Series|main
 .TE
 
 .bp
