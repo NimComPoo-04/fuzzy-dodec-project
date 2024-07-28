@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Problem_Sheet_1a_10
 {
-	static int calcPower(int n, int k)
+	static int[] calcPower(int n, int k)
 	{
 		int d = k;
 		int count = 0;
@@ -13,17 +13,7 @@ public class Problem_Sheet_1a_10
 			d *= k;
 			count++;
 		}
-		return count;
-	}
-
-	static boolean isPrime(int n)
-	{
-		if(n == 1)
-			return false;
-		for(int i = 2; i <= n / i; i++)
-			if(n % i == 0)
-				return false;
-		return true;
+		return new int[]{count, d / k};
 	}
 
 	static void findPrimePowers(int n)
@@ -31,8 +21,12 @@ public class Problem_Sheet_1a_10
 		System.out.println("Prime factors and their powers: ");
 		for(int i = 2; i <= n; i++)
 		{
-			if(n % i == 0 && isPrime(i))
-				System.out.println("power of " + i + " = " + calcPower(n, i));
+			if(n % i == 0)
+			{
+				int k[] = calcPower(n, i);
+				System.out.println("power of " + i + " = " + k[0]);
+				n = n / k[1];
+			}
 		}
 	}
 
